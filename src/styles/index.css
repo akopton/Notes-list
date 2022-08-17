@@ -1,0 +1,14 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}/*# sourceMappingURL=index.css.map */

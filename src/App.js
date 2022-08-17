@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import NotesList from "./components/NotesList";
 
-function App() {
+const App = () => {
+  const [notes, setNotes] = useState([
+    {
+      id: '',
+      text: 'to jest pierwsza notka',
+      date: '09.04.1999'
+    },
+    {
+      id: '',
+      text: 'to jest druga notka',
+      date: '15.08.1998'
+    },
+    {
+      id: '',
+      text: 'to jest trzecia notka',
+      date: '18.02.1962'
+    },
+  ])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="box">
+      <NotesList notes={notes}/>
+      {/* {notes.map((note) => {
+        return (
+          <NotesList notes={notes}/>
+        )
+      })} */}
     </div>
-  );
+  )
 }
 
 export default App;
