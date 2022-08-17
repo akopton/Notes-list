@@ -2,10 +2,10 @@
 
 const Note = ( {id, text, date} ) => {
     return (
-        <div className="note">
+        <li key={id} className="note">
             <span>{text}</span>
             <span>{date}</span>
-        </div>
+        </li>
     )
 }
 
