@@ -2,7 +2,7 @@
 
 const Note = ( {id, text, date} ) => {
     return (
-        <li key={id} className="note">
+        <li className="note">
             <span>{text}</span>
             <span>{date}</span>
         </li>

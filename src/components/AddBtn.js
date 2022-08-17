@@ -6,8 +6,10 @@ const AddBtn = ({ notes, setNotes }) => {
     const [newNoteClasses, setNewNoteClasses] = useState(['newNote', 'hidden'])
     const [noteToAdd, setNoteToAdd] = useState({id:'',text:'',date:''})
     const current = new Date()
-    const date = current.getSeconds()
-
+    const day = current.getDate()
+    const month = current.getMonth()
+    const year = current.getFullYear()
+    const date = month < 10 ? `${day}.0${month}.${year}` : `${day}.${month}.${year}`
 
     const newNote = () => {
         if (newNoteClasses.some(el => el == 'hidden'))
