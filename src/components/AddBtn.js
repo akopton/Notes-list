@@ -29,17 +29,15 @@ const AddBtn = ({ notes, setNotes }) => {
     }
 
     const addNote = () => {
-        // console.log('add')
         setNotes(notes = [...notes, noteToAdd])
         setNewNoteClasses(['newNote' ,'hidden'])
         setNoteToAdd({id:'',text:'',date:''})
-        console.log(notes)
     }
 
 
     return (
         <div>
-            <button onClick={newNoteClasses.some(el => el == 'hidden') ? newNote : closeNewNote}>elo</button>
+            <button className="newNoteBtn" onClick={newNoteClasses.some(el => el == 'hidden') ? newNote : closeNewNote}>Dodaj notatkę</button>
             <div className={newNoteClasses.join(' ')}>
                 <textarea
                     value={noteToAdd.text}
